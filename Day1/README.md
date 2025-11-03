@@ -5,6 +5,20 @@ By the end of this week, you will understand how software maps to silicon and ho
 
 ---
 
+## Table of Contents
+
+- [Introduction to QFN-48 / Chip / Die / IPs](#1-introduction-to-qfn-48-package-chip-pads-core-die-and-ips)  
+- [Introduction to RISC-V](#2-introduction-to-risc-v)  
+- [Software → Hardware Flow](#3-from-software-applications-to-hardware)  
+- [SoC Design and OpenLANE](#4-soc-design-and-openlane)  
+- [Simplified RTL2GDS Flow](#5-simplified-rtl2gds-flow)  
+- [OpenLANE and Strive Chipsets](#6-openlane-and-strive-chipsets)  
+- [Detailed OpenLANE Flow Overview](#7-detailed-openlane-flow-overview)  
+- [Lab Work – Environment Setup + Synthesis](#8-lab-work--environment-setup--synthesis)  
+- [Task – Flop Ratio / DFF %](#task--flop-ratio--dff-)  
+- [Week-6 Summary](#summary)
+
+
 ## 1. Introduction to QFN-48 Package, Chip, Pads, Core, Die and IPs
 
 A package is the protective case enclosing the actual silicon chip.
@@ -21,7 +35,7 @@ The QFN-48 (Quad Flat No-leads) package has 48 electrical connection pins.
 2. **Core**: Contains all the digital logic.  
 3. **Die**: The combination of *core + pads* — the fundamental manufacturing unit. <br>
 
-![alt text](<Screenshot 2025-11-03 171553.png>)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day1/Images/chip_structure.png)
 ---
 
 #### <ins>Foundry & IPs:</ins>
@@ -29,7 +43,7 @@ The QFN-48 (Quad Flat No-leads) package has 48 electrical connection pins.
    - **Foundry IPs**: Proprietary design components optimized for a specific process node.  
    - **Macros**: Reusable digital logic blocks.
 
-![alt text](<Screenshot 2025-11-03 171835.png>)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day1/Images/ips.png)
 
 ---
 
@@ -44,7 +58,7 @@ RISC-V is an open-source Instruction Set Architecture.
 - Useful for small to high-performance CPU
 - Strong open-source support
 
-![alt text](risc_v_architecture.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day1/Images/risc_v_architecture.png)
 
 ---
 
@@ -59,7 +73,7 @@ RISC-V is an open-source Instruction Set Architecture.
 Execution pipeline:
 Application → OS → Compiler → Assembler → Binary → Hardware (RTL → Netlist → Layout)
 
-![alt text](software_to_hardware.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day1/Images/software_to_hardware.png)
 
 ---
 
@@ -71,7 +85,7 @@ To design an SoC we need:
 2) EDA Tools (Yosys, OpenROAD, Magic, OpenSTA)
 3) PDK (Sky130)
 
-![alt text](image.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day1/Images/soc_design.png)
 
 ---
 
@@ -86,7 +100,7 @@ Steps:
 - Sign-off (DRC / LVS / Timing)
 - GDSII generation
 
-![alt text](rtl_to_gdsii_flow.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day1/Images/rtl_to_gdsii_flow.png)
 
 ---
 
@@ -113,7 +127,7 @@ Strive SoC = RISC-V SoC family built via OpenLANE
 | DFT | Fault | scan / ATPG |
 | Final Output | GDSII | fab ready |
 
-(IMAGE placeholder: OpenLANE detailed flow)
+
 
 ---
 
@@ -185,7 +199,7 @@ sudo make install
 - Build errors (Method 2) → install missing dependencies (build-essential, tcl, tk, python3-pip, etc.)
 
 ### Directory Structure
-![alt text](<Screenshot 2025-11-01 141539.png>)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day1/Images/ls_opendirectory_dir.png)
 
 
 ### OpenLANE setup and synthesis :
@@ -219,7 +233,7 @@ alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e 
 cd designs
 ```
 
-![alt text](<Screenshot 2025-11-01 142613.png>)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day1/Images/Docker%20Alias%20Setup.png)
 
 ### 5. Launch Docker Container
 
@@ -231,7 +245,7 @@ docker
 ./flow.tcl -interactive
 ```
 
-![alt text](<Screenshot 2025-11-01 142726.png>)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day1/Images/docker.png)
 
 ### 7. Load OpenLane Package
 
@@ -249,14 +263,14 @@ prep -design picorv32a
 ```
 This  Prepares the design environment for picorv32a processor, setting up necessary files and configurations.
 
-![alt text](<Screenshot 2025-11-01 153723.png>)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day1/Images/load_openlane_package.png)
 
 ### 9. Run Synthesis
 ```bash
 run_synthesis
 ```
 
-![alt text](<Screenshot 2025-11-01 153925.png>)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day1/Images/synthesis.png)
 
 - this Executes the logic synthesis step, converting RTL code to gate-level netlist using the specified technology library.
 
@@ -273,15 +287,15 @@ Flop ratio = 1613 / 15134 = 0.1065
 DFF % = 10.65%
 
 ### Total Cells Count
-![alt text](<Screenshot 2025-11-01 164132.png>)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day1/Images/total_cells.png)
 
 ### DFF Cells Count
 
-![alt text](<Screenshot 2025-11-01 164202.png>)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day1/Images/total_dff.png)
 
 ---
 
-## Summary of Week 6
+## Summary
 
 | No | Topic | Key Focus |
 |----|--------|-----------|
