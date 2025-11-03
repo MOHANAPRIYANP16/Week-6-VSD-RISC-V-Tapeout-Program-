@@ -28,15 +28,15 @@
 
 ## Day-wise Folders:
 
-- [Day 1: Inception of open-source EDA, OpenLANE and Sky130 PDK](https://github.com/santhoshvec24/Week-6-VSD-RISC-V-Tapeout-Program/tree/main/Day1)
+- [Day 1: Inception of open-source EDA, OpenLANE and Sky130 PDK](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/tree/main/Day1)
 
-- [Day 2: Good floorplan vs Bad floorplan and Introduction to library cells](https://github.com/santhoshvec24/Week-6-VSD-RISC-V-Tapeout-Program/tree/main/Day2)
+- [Day 2: Good floorplan vs Bad floorplan and Introduction to library cells](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/tree/main/Day2)
 
-- [Day 3: Design library cell using Magic Layout and ngspice characterization](https://github.com/santhoshvec24/Week-6-VSD-RISC-V-Tapeout-Program/tree/main/Day3)
+- [Day 3: Design library cell using Magic Layout and ngspice characterization](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/tree/main/Day3)
 
-- [Day 4: Pre-layout Timing Analysis and Importance of Good Clock Tree](https://github.com/santhoshvec24/Week-6-VSD-RISC-V-Tapeout-Program/tree/main/Day4)
+- [Day 4: Pre-layout Timing Analysis and Importance of Good Clock Tree](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/tree/main/Day4)
 
-- [Day 5: Final Step for RTL to GDS using tritonRoute and OpenSTA](https://github.com/santhoshvec24/Week-6-VSD-RISC-V-Tapeout-Program/tree/main/Day5)
+- [Day 5: Final Step for RTL to GDS using tritonRoute and OpenSTA](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/tree/main/Day5)
 
 ---
 
