@@ -1,4 +1,7 @@
-# Week 6 – RISC-V Tapeout Program
+# Week 6 – Inception of open-source EDA, OpenLANE and Sky130 PDK
+
+![Static Badge](https://img.shields.io/badge/OS-linux-darkred)
+![Static Badge](https://img.shields.io/badge/EDA%20Tools-OpenLANE--Flow%2C_Yosys%2C_abc%2C_OpenROAD%2C_TritonRoute%2C_OpenSTA%2C_magic%2C_netgen%2C_GUNA-darkblue)
 
 This week introduces the fundamentals of chip packaging, RISC-V architecture, SoC design, and the OpenLANE ASIC flow used for creating fabrication-ready layouts.
 By the end of this week, you will understand how software maps to silicon and how to run a complete RTL-to-GDS flow using open-source tools.
@@ -133,7 +136,7 @@ Strive SoC = RISC-V SoC family built via OpenLANE
 
 ## 8. Lab Work – Environment Setup + Synthesis
 
-# Environment Setup Guide (Improved / Cleaner)
+# Environment Setup Guide 
 
 ## Overview
 This document explains how to set up the OpenLANE environment for the RISC-V Tapeout Program using Oracle VirtualBox.
@@ -241,6 +244,9 @@ cd designs
 docker
 ```
 ### 6. start OpenLane in interactive mode.
+
+Run inside % :
+
 ```bash
 ./flow.tcl -interactive
 ```

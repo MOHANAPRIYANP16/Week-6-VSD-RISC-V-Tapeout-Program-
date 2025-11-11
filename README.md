@@ -36,7 +36,7 @@
 
 - [Day 4: Pre-layout Timing Analysis and Importance of Good Clock Tree](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/tree/main/Day4)
 
-- [Day 5: Final Step for RTL to GDS using tritonRoute and OpenSTA](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/tree/main/Day5)
+- [Day 5: Final Step for RTL to GDS using tritonRoute and OpenSTA](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/tree/main/Day5 )
 
 ---
 
@@ -48,10 +48,10 @@ Gratitude to the SKY130 PDK community, Contributors of VSDBabySoC repository and
 ---
 
 ## Contributor
-  Santhosh V ([LinkedIn](https://www.linkedin.com/in/santhosh-v-31142232b/)) 
+  Mohanapriyan P ([LinkedIn](linkedin.com/in/mohanapriyan-p-b94962325)) 
 
 ---
 
-Previous week, Week 5 : [Week 5 Repository](https://github.com/santhoshvec24/Week-5-VSD-RISC-V-Tapeout-Program)
+Previous week, Week 5 : [Week 5 Repository](https://github.com/MOHANAPRIYANP16/Week-5-VSD-RISC-V-Tapeout-Program-)
 
 ---
