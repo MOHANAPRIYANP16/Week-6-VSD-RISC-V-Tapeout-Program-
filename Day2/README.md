@@ -3,6 +3,17 @@
 ![Static Badge](https://img.shields.io/badge/OS-linux-darkred)
 ![Static Badge](https://img.shields.io/badge/EDA%20Tools-OpenLANE--Flow%2C_Yosys%2C_abc%2C_OpenROAD%2C_TritonRoute%2C_OpenSTA%2C_magic%2C_netgen%2C_GUNA-darkblue)
 
+## 📚 Table of Contents
+
+| Section | Title | Description |
+|----------|--------|-------------|
+| 1 | **Running Floorplan for `picorv32a` in OpenLANE** | Steps to invoke OpenLANE in interactive mode, prepare the design, and run synthesis and floorplan. |
+| 2 | **Calculating Die Area in Microns** | Calculation of die width, height, and area using values from the floorplan DEF file. |
+| 3 | **Loading Floorplan DEF in Magic** | Commands to visualize the generated floorplan in Magic and explore decap and tap cells. |
+| 4 | **Running Congestion-Aware Placement** | Execution of placement stage in OpenLANE and understanding of placement workflow. |
+| 5 | **Exploring Placement in Magic** | Loading and analyzing placement DEF in Magic to verify standard cell placement. |
+| 6 | **Exiting OpenLANE and Docker Environment** | Commands to safely exit OpenLANE interactive mode and Docker subsystem. |
+
 1. Run 'picorv32a' design floorplan using OpenLANE flow and generate necessary outputs.
 
 Commands to invoke the OpenLANE flow and perform floorplan
@@ -32,15 +43,15 @@ run_floorplan
 
 
 ```
-![alt text](<synhesisand floorplan.png>)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/synhesisand%20floorplan.png)
 
-![alt text](pdnsuccessful.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/pdnsuccessful.png)
 
 2. Calculate the die area in microns from the values in the floorplan def:
 
 Screenshot of contents of floorplan def
 
-![alt text](calculation_day2.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/calculation_day2.png)
 
 According to floorplan def
 ```math
@@ -79,13 +90,13 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ```
 Screenshots of floorplan def in magic:
 
-![alt text](image.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/floorplan.png)
 
-![alt text](image-1.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/floorplan1.png)
 
 Decap Cells and Tap Cells:
 
-![alt text](image-2.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/decap_cells.png)
 
 4. Run 'picorv32a' design congestion aware placement using OpenLANE flow and generate necessary outputs.
 
@@ -94,7 +105,7 @@ Decap Cells and Tap Cells:
 run_placement
 ```
 workflow:
-![alt text](image-3.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/run_placement.png)
 
 5. Load generated placement def in magic tool and explore the placement.
 
@@ -110,11 +121,11 @@ magic -T /openLANE_flow/pdks/sky130A/libs.tech/magic/sky130A.tech \
 lef read ../../tmp/merged.lef \
 def read picorv32a.placement.def &
 ```
-![alt text](image-4.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/placement_magic.png)
 
 Standard cells legally placed
 
-![alt text](image-5.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/standard_cells_legacy.png)
 
 Commands to exit from current run
 ```bash
@@ -124,3 +135,19 @@ exit
 # Exit from OpenLANE flow docker sub-system
 exit
 ```
+## 🧾 Summary
+
+On **Day 2**, the focus was on understanding the **difference between good and bad floorplans**, exploring **library cells**, and using the **OpenLANE flow** to generate and analyze the **floorplan** and **placement** of the `picorv32a` RISC-V core design.
+
+The session began by setting up and invoking the **OpenLANE interactive flow** inside Docker. After preparing the design, **synthesis** and **floorplanning** were executed, followed by calculation of the **die area** in microns using data from the DEF file.
+
+The generated floorplan was visualized in **Magic**, allowing exploration of **decap cells** and **tap cells**, which ensure proper power distribution and substrate biasing.  
+Next, a **congestion-aware placement** was performed, and the resulting placement DEF was loaded in Magic to verify that **standard cells** were legally placed.
+
+By the end of this exercise, you learned to:
+- Run synthesis, floorplanning, and placement using OpenLANE  
+- Calculate die area using DEF file parameters  
+- Visualize layouts using Magic  
+- Understand library cell usage in ASIC design  
+
+---

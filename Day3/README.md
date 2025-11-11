@@ -125,11 +125,11 @@ Command to open custom inverter layout in magic
 magic -T sky130A.tech sky130_inv.mag &
 ```
 
-![alt text](image.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day3/Images/inverter1.png)
 
 custom inverter layout in magic and NMOS and PMOS identified :
 
-![alt text](image-1.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day3/Images/inverter2.png)
 
 ### Running Design Rule Check (DRC)
 
@@ -141,7 +141,7 @@ drc why
 ```
 
 
-![alt text](image-2.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day3/Images/drc_check.png)
 
 ### Extracting the SPICE Netlist
 Once the layout is DRC-clean, the next step is to generate its SPICE netlist for circuit-level verification.
@@ -151,7 +151,7 @@ extract all
 ext2spice cthresh 0 rthresh 0
 ext2spice
 ```
-![alt text](image-2.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day3/Images/drc_check.png)
 
 ### Editing SPICE for Transient Simulation
 
@@ -178,14 +178,17 @@ run
 .end
 ```
 
-![alt text](image-3.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day3/Images/editing_spice.png)
 
 ### Simulating in NGSPICE
 Run the transient analysis and visualize the inverter’s switching waveform.
 
 ```bash
 ngspice sky130_inv.spice
+
+# Now that we have entered ngspice with the simulation spice file loaded we just have to load the plot
+plot y vs time a
 ```
 
-![alt text](image-4.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-6-VSD-RISC-V-Tapeout-Program-/blob/main/Day3/Images/ngspice_simulation.png)
 
