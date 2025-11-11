@@ -25,3 +25,21 @@ whats
 ![alt text](image-1.png)
 
 in console
+
+```bash
+save sky130_vsdinv.mag
+lef write
+```
+
+![alt text](image.png)
+
+Viewing Generated LEF File Commands to Open LEF:
+```bash
+cd vsdstdcelldesign
+less sky130_vsdinv.lef
+```
+Opening LEF File:
+
+![alt text](image-1.png)
+
+
